@@ -72,19 +72,6 @@
             }
         },
         {
-            "id": "output_assembly_name",
-            "optional": false,
-            "advanced": false,
-            "allow_multiple": false,
-            "default_values": ["Canu_Assembly"],
-            "field_type": "text",
-            "text_options": {
-                "validate_as": "WorkspaceName",
-                "is_output_name": true,
-                "placeholder": "Canu_Assembly"
-            }
-        },
-        {
             "id": "min_read_length",
             "optional": true,
             "advanced": false,
@@ -163,6 +150,21 @@
                 "unchecked_value": 0
             }
         }
+        {
+            "id": "output_assembly_name",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": ["Canu_Assembly"],
+            "field_type": "text",
+            "text_options": {
+                "valid_ws_types": [
+                    "KBaseGenomeAnnotations.Assembly"
+                ],
+                "is_output_name": true,
+                "placeholder": "Canu_Assembly"
+            }
+        }        
     ],
     "behavior": {
         "service-mapping": {
